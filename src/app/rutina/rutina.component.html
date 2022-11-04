@@ -1,0 +1,47 @@
+<section class="home">
+    <div class="text">Bienvenido Administrador</div>
+    <div>
+        
+        <h1 class="tabla-titulo">Rutinas</h1>
+        <p class="tabla-p">A continuación encontraras todos los Rutinas registrados, como los deportivos o sobre elementos para gimnasio que brinda la Escuela Tecnológica Instituto Técnico Central (ETITC).</p>
+        
+        <div class="boton-css">
+            <button>
+                <a routerLink="../inicio" class="btn">Volver</a>
+            </button>
+            <button>
+                <a routerLink="registrar-rutina" class="btn">Registrar Implemento</a>
+            </button>
+        </div>
+
+        <table class="tablas-crud">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Categoria</th>
+                    <th colspan="2">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let rutina of rutina">
+                    <td>{{rutina.idRutina}}</td>
+                    <td>{{rutina.nombreRutina}}</td>
+                    <td>{{rutina.descripcionRutina}}</td>
+                    <td>{{rutina.tiempoRutina}}</td>
+                    <td>
+                        <button (click) = "actualizarRutina(rutina.idRutina)" class="btn">
+                            Editar
+                        </button>
+                    </td>
+                    <td>
+                        <button (click) = "eliminarRutina(rutina.idRutina)" class="btn">
+                            Eliminar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

@@ -1,0 +1,47 @@
+<section class="home">
+    <div class="text">Bienvenido Administrador</div>
+    <div>
+        
+        <h1 class="tabla-titulo">Implementos</h1>
+        <p class="tabla-p">A continuación encontraras todos los implementos registrados, como los deportivos o sobre elementos para gimnasio que brinda la Escuela Tecnológica Instituto Técnico Central (ETITC).</p>
+        
+        <div class="boton-css">
+            <button>
+                <a routerLink="../inicio" class="btn">Volver</a>
+            </button>
+            <button>
+                <a routerLink="registrar-implemento" class="btn">Registrar Implemento</a>
+            </button>
+        </div>
+
+        <table class="tablas-crud">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Categoria</th>
+                    <th colspan="2">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let implemento of implementos">
+                    <td>{{implemento.idImplemento}}</td>
+                    <td>{{implemento.nombreImplemento}}</td>
+                    <td>{{implemento.descripcionImplemento}}</td>
+                    <td>{{implemento.categoriaImplemento}}</td>
+                    <td>
+                        <button (click) = "actualizarImplemento(implemento.idImplemento)" class="btn">
+                            Editar
+                        </button>
+                    </td>
+                    <td>
+                        <button (click) = "eliminarImplemento(implemento.idImplemento)" class="btn">
+                            Eliminar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

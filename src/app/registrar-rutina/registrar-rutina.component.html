@@ -1,0 +1,24 @@
+<section class="home">
+    <div class="text">Bienvenido Administrador</div> 
+    <!--FORMULARIO---->
+    <form class="form" (ngSubmit)="onSubmitRutina()">
+            
+        <!--TITULO------------------------>
+        <h1 class="titulo">Registrar Rutina</h1>
+        
+        <!--CAJAS-DE-ENTRADA-DE-DATOS------------------------------------------------>
+        <input class="cajas" type="text" [(ngModel)]="rutina.nombreRutina" placeholder="Nombre" id="nombreRutina" name="nombreRutina">
+        <textarea class="cajas" name="descripcionRutina" id="descripcionRutina" cols="30" rows="5" [(ngModel)]="rutina.descripcionRutina" placeholder="Descripcion"></textarea>
+        <input class="cajas" type="text" [(ngModel)]="rutina.tiempoRutina" placeholder="Categoria" id="tiempoRutina" name="tiempoRutina">
+        
+        <!--BOTON-DE-REGISTRARSE-------------------------->
+        <button class="btn" style="margin-right: 20px;">
+            Registrar
+        </button>
+        <!--BOTON-DE-VOLVER-------------------------->
+    <button class="btn" routerLink = "../../rutinas">
+        Regresar
+    </button>
+        
+    </form>
+</section>

@@ -1,0 +1,24 @@
+<section class="home">
+    <div class="text">Bienvenido Administrador</div> 
+    <!--FORMULARIO---->
+    <form class="form" (ngSubmit)="onSubmitMaquinaria()">
+            
+        <!--TITULO------------------------>
+        <h1 class="titulo">Registrar Maquinaria</h1>
+        
+        <!--CAJAS-DE-ENTRADA-DE-DATOS------------------------------------------------>
+        <input class="cajas" type="text" [(ngModel)]="maquinaria.nombreMaquinaria" placeholder="Nombre" id="nombreMaquinaria" name="nombreMaquinaria">
+        <textarea class="cajas" name="descripcionMaquinaria" id="descripcionMaquinaria" cols="30" rows="5" [(ngModel)]="maquinaria.descripcionMaquinaria" placeholder="Descripcion"></textarea>
+        <input class="cajas" type="text" [(ngModel)]="maquinaria.categoriaMaquinaria" placeholder="Categoria" id="categoriaMaquinaria" name="categoriaMaquinaria">
+        
+        <!--BOTON-DE-REGISTRARSE-------------------------->
+        <button class="btn" style="margin-right: 20px;">
+            Registrar
+        </button>
+        <!--BOTON-DE-VOLVER-------------------------->
+    <button class="btn" routerLink = "../../maquinarias">
+        Regresar
+    </button>
+        
+    </form>
+</section>

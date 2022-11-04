@@ -1,0 +1,24 @@
+<section class="home">
+<div class="text">Bienvenido Administrador</div> 
+<!--FORMULARIO---->
+<form class="form" (ngSubmit)="onSubmitImplemento()">
+        
+    <!--TITULO------------------------>
+    <h1 class="titulo">Registrar Implemento</h1>
+    
+    <!--CAJAS-DE-ENTRADA-DE-DATOS------------------------------------------------>
+    <input class="cajas" type="text" [(ngModel)]="implemento.nombreImplemento" placeholder="Nombre" id="nombreImplemento" name="nombreImplemento">
+    <textarea class="cajas" name="descripcionImplemento" id="descripcionImplemento" cols="30" rows="5" [(ngModel)]="implemento.descripcionImplemento" placeholder="Descripcion"></textarea>
+    <input class="cajas" type="text" [(ngModel)]="implemento.categoriaImplemento" placeholder="Categoria" id="categoriaImplemento" name="categoriaImplemento">
+    
+    <!--BOTON-DE-REGISTRARSE-------------------------->
+    <button class="btn" style="margin-right: 20px;">
+        Registrar
+    </button>
+    <!--BOTON-DE-volver-------------------------->
+    <button class="btn" routerLink = "../../implementos">
+        Regresar
+    </button>
+    
+</form>
+</section>
