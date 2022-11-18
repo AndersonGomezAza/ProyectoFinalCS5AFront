@@ -28,7 +28,7 @@ export class RegistrarMaquinariaComponent implements OnInit {
   }
 
   retornarHaciaLaLista(){
-    this.routerMaquinaria.navigate(['maquinaria']);
+    this.routerMaquinaria.navigate(['maquinarias']);
   }
 
 }

@@ -1,22 +1,19 @@
-<section class="home">
-    <div class="text">Bienvenido Administrador</div> 
-    <!--FORMULARIO---->
-    <form class="form" (ngSubmit)="onSubmitImplemento()" #implementoForm = "ngForm">
-            
-        <!--TITULO------------------------>
-        <h1 class="titulo">Actualizar Implemento</h1>
+<!--FORMULARIO---->
+<form class="form" (ngSubmit)="onSubmitImplemento()" #implementoForm = "ngForm">
         
-        <!--CAJAS-DE-ENTRADA-DE-DATOS------------------------------------------------>
-        <input class="cajas" type="text" [(ngModel)]="implemento.nombreImplemento" placeholder="Nombre" id="nombreImplemento" name="nombreImplemento" #nombreImplemento="ngModel">
-        <textarea class="cajas" name="descripcionImplemento" id="descripcionImplemento" cols="30" rows="5" [(ngModel)]="implemento.descripcionImplemento" placeholder="Descripcion" #descripcionImplemento="ngModel"></textarea>
-        <input class="cajas" type="text" [(ngModel)]="implemento.categoriaImplemento" placeholder="Categoria" id="categoriaImplemento" name="categoriaImplemento" #categoriaImplemento="ngModel">
-        
-        <!--BOTON-DE-ACTUALIZAR-------------------------->
-        <button class="btn" [disabled]= "!implementoForm.form.valid">Guardar</button>
-        <!--BOTON-DE-volver-------------------------->
-        <button class="btn" routerLink = "../../implementos">
-            Regresar
-        </button>
-        
-    </form>
-    </section>
+    <!--TITULO------------------------>
+    <h1 class="titulo">Actualizar Implemento</h1>
+    
+    <!--CAJAS-DE-ENTRADA-DE-DATOS------------------------------------------------>
+    <input class="cajas" type="text" [(ngModel)]="implemento.nombreImplemento" placeholder="Nombre" id="nombreImplemento" name="nombreImplemento" #nombreImplemento="ngModel">
+    <textarea class="cajas" name="descripcionImplemento" id="descripcionImplemento" cols="30" rows="5" [(ngModel)]="implemento.descripcionImplemento" placeholder="Descripcion" #descripcionImplemento="ngModel"></textarea>
+    <input class="cajas" type="text" [(ngModel)]="implemento.categoriaImplemento" placeholder="Categoria" id="categoriaImplemento" name="categoriaImplemento" #categoriaImplemento="ngModel">
+    
+    <!--BOTON-DE-ACTUALIZAR-------------------------->
+    <button class="btn" [disabled]= "!implementoForm.form.valid">Guardar</button>
+    <!--BOTON-DE-volver-------------------------->
+    <button class="btn" routerLink = "../../implementos">
+        Regresar
+    </button>
+    
+</form>
