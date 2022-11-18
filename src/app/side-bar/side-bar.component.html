@@ -10,13 +10,15 @@
           <span class="profession">Gimnasio ETITC</span>
         </div>
       </div>
-  
-      <i class="bx bx-chevron-right toggle"></i>
+      <!-- <i class="bx bx-chevron-right toggle"></i> -->
     </header>
-  
+    
     <div class="menu-bar">
       <div class="menu">
-  
+        <div class="text logo-text">
+          <span class="profession">Hola {{user}}<br>Eres {{role}}</span>
+        </div>
+
         <ul class="menu-links">
           <li class="nav-link">
             <a routerLink="inicio" routerLinkActive="active">
@@ -70,14 +72,14 @@
       </div>
   
       <div class="bottom-content">
-        <!-- <li class="">
-          <a routerLink="#">
+        <li class="">
+          <a routerLink="#" (click)="logout()">
             <i class="bx bx-log-out icon"></i>
-            <span class="text nav-text">Logout</span>
+            <span class="text nav-text">Cerrar Sesion</span>
           </a>
-        </li> -->
+        </li>
   
-        <li class="mode">
+        <!-- <li class="mode">
           <div class="sun-moon">
             <i class="bx bx-moon icon moon"></i>
             <i class="bx bx-sun icon sun"></i>
@@ -87,9 +89,10 @@
           <div class="toggle-switch">
             <span class="switch"></span>
           </div>
-        </li>
+        </li> -->
       </div>
     </div>
   </nav>
+  
 
   

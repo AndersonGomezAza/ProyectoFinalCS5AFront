@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -16,6 +16,24 @@ import { ActualizarMaquinariaComponent } from './actualizar-maquinaria/actualiza
 import { RegistrarRutinaComponent } from './registrar-rutina/registrar-rutina.component';
 import { ActualizarRutinaComponent } from './actualizar-rutina/actualizar-rutina.component';
 import { RutinaComponent } from './rutina/rutina.component';
+import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+import { ActivatedRoute } from '@angular/router';
+
+function initializeKeycloak(keycloak: KeycloakService) {
+  return () =>
+    keycloak.init({
+      config: {
+        realm: 'GYM ETITC CONTROL',
+        url: 'http://localhost:9090/auth',
+        clientId: 'angular-client'
+      },
+      initOptions: {
+        onLoad: 'login-required',
+        flow: 'standard',
+      },
+      loadUserProfileAtStartUp: true
+    });
+}
 
 @NgModule({
   declarations: [
@@ -36,9 +54,17 @@ import { RutinaComponent } from './rutina/rutina.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    KeycloakAngularModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeKeycloak,
+      multi: true,
+      deps: [KeycloakService]
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
