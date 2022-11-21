@@ -1,5 +1,14 @@
 <app-side-bar></app-side-bar>
 <section class="home">
-    <div class="text">Bienvenido {{user}}</div>
+    <div class="datos-sesion">
+        <span class="fecha">Fecha: {{dia | date : "dd-MMM-yy"}} Hora: {{hora + " : " + min + " : " + seg}}</span>
+        <div class="usuario-ingresado">
+            <i class='bx bxs-user'></i>
+            <span>Usuario: {{user}}</span>
+            <i class='bx bx-log-out-circle icon-logout' (click)="logout()"></i>
+        </div>
+    </div>
+    <div class="text">Bienvenido {{role}}</div>
+    <span class="ir-arriba bx bx-up-arrow-alt"><i ></i></span>
     <router-outlet></router-outlet>    
 </section>

@@ -22,6 +22,8 @@
     --tabla-head: rgb(169, 189, 165);
     --table-text: #000;
     --tabla-fondo: rgb(57, 206, 34);
+    --irAriba: #09200f;
+    --irAribaText: #fff;
     
 
     /* ====== Transition ====== */
@@ -49,6 +51,8 @@ body.dark{
     --btn-fondo: #0b3816;
     --tabla-head: #3a3b3c;
     --tabla-fondo: rgba(57, 206, 34, 0.482);
+    --irAriba: #fff;
+    --irAribaText: #09200f;
 
     text-align: center;
 }
@@ -321,7 +325,7 @@ body{
     font-size: 35px;
     font-weight: 700;
     color: var(--text-color);
-    padding: 12px 60px;
+    padding: 0px 60px;
 }
 
 body.dark .home .text{
@@ -427,4 +431,51 @@ body.dark .home .text{
 }
 .cajas:hover, .cajas:focus{
     border-left: 10px solid var(--form-fondo);
+}
+
+.datos-sesion{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu .menu-links .nav-link, .card-list-a {
+    display: none;
+}
+.menu .menu-links .link-block-sidebar,  .link-block-sidebar{
+    display: block;
+}
+
+.ir-arriba {
+	display:none;
+	background:var(--irAriba);
+    height: 40px;
+    padding-top: 2px;
+	font-size:40px;
+    font-weight: bold;
+	color:var(--irAribaText);
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+    border-radius: 10px;
+}
+
+.usuario-ingresado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.icon-logout {
+    cursor: pointer;
+    background:var(--irAriba);
+    color:var(--irAribaText);
+    padding: 7px;
+    border-radius: 10px;
+    margin-right: 10px;
 }
