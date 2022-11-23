@@ -8,6 +8,11 @@
     <!--CAJAS-DE-ENTRADA-DE-DATOS------------------------------------------------>
     <input class="cajas" type="text" [(ngModel)]="maquinaria.nombreMaquinaria" placeholder="Nombre" id="nombreMaquinaria" name="nombreMaquinaria" #nombreMaquinaria="ngModel">
     <textarea class="cajas" name="descripcionMaquinaria" id="descripcionMaquinaria" cols="30" rows="5" [(ngModel)]="maquinaria.descripcionMaquinaria" placeholder="Descripcion" #descripcionMaquinaria="ngModel"></textarea>
+    <select class="cajas" type="text" [(ngModel)]="maquinaria.estadoMaquinaria" id="estadoMaquinaria" name="estadoMaquinaria">
+        <option class="cajas" value="En Uso">En Uso</option>
+        <option class="cajas" value="Disponible">Disponible</option>
+        <option class="cajas" value="En Mantenimiento">En Mantenimiento</option>
+    </select>
     <input class="cajas" type="text" [(ngModel)]="maquinaria.categoriaMaquinaria" placeholder="Categoria" id="categoriaMaquinaria" name="categoriaMaquinaria" #categoriaMaquinaria="ngModel">
     
     <!--BOTON-DE-ACTUALIZAR-------------------------->

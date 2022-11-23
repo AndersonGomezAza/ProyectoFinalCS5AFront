@@ -22,7 +22,7 @@ export class ActualizarMaquinariaComponent implements OnInit {
   }
 
   irAlaListaDeMaquinarias(){
-    this.router.navigate(['/maquinaria']);
+    this.router.navigate(['/maquinarias']);
     console.log('Maquinarias actualizado',`El Maquinaria ${this.maquinaria.nombreMaquinaria} ha sido actualizado con exito`,`success`);
   }
 
