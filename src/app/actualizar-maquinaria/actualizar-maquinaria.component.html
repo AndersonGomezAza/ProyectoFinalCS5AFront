@@ -6,6 +6,7 @@
     <h1 class="titulo">Actualizar Maquinaria</h1>
     
     <!--CAJAS-DE-ENTRADA-DE-DATOS------------------------------------------------>
+    <input class="cajas" type="text" [(ngModel)]="maquinaria.serialMaquinaria" placeholder="Serial" id="serialMaquinaria" name="serialMaquinaria" #serialMaquinaria="ngModel">
     <input class="cajas" type="text" [(ngModel)]="maquinaria.nombreMaquinaria" placeholder="Nombre" id="nombreMaquinaria" name="nombreMaquinaria" #nombreMaquinaria="ngModel">
     <textarea class="cajas" name="descripcionMaquinaria" id="descripcionMaquinaria" cols="30" rows="5" [(ngModel)]="maquinaria.descripcionMaquinaria" placeholder="Descripcion" #descripcionMaquinaria="ngModel"></textarea>
     <select class="cajas" type="text" [(ngModel)]="maquinaria.estadoMaquinaria" id="estadoMaquinaria" name="estadoMaquinaria">
@@ -16,7 +17,7 @@
     <input class="cajas" type="text" [(ngModel)]="maquinaria.categoriaMaquinaria" placeholder="Categoria" id="categoriaMaquinaria" name="categoriaMaquinaria" #categoriaMaquinaria="ngModel">
     
     <!--BOTON-DE-ACTUALIZAR-------------------------->
-    <button class="btn" [disabled]= "!maquinariaForm.form.valid">Guardar</button>
+    <button class="btn" style="margin-right: 20px;" [disabled]= "!maquinariaForm.form.valid">Guardar</button>
     <!--BOTON-DE-volver-------------------------->
     <button class="btn" routerLink = "../../maquinarias">
         Regresar

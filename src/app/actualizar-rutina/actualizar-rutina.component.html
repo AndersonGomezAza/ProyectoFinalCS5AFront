@@ -12,7 +12,7 @@
     <input class="cajas" type="text" [(ngModel)]="rutina.tiempoRutina" placeholder="Tiempo" id="tiempoRutina" name="tiempoRutina" #tiempoRutina="ngModel">
     
     <!--BOTON-DE-ACTUALIZAR-------------------------->
-    <button class="btn" [disabled]= "!rutinaForm.form.valid">Guardar</button>
+    <button class="btn" style="margin-right: 20px;" [disabled]= "!rutinaForm.form.valid">Guardar</button>
     <!--BOTON-DE-volver-------------------------->
     <button class="btn" routerLink = "../../rutina">
         Regresar

@@ -10,7 +10,7 @@
     <input class="cajas" type="text" [(ngModel)]="implemento.categoriaImplemento" placeholder="Categoria" id="categoriaImplemento" name="categoriaImplemento" #categoriaImplemento="ngModel">
     
     <!--BOTON-DE-ACTUALIZAR-------------------------->
-    <button class="btn" [disabled]= "!implementoForm.form.valid">Guardar</button>
+    <button class="btn" style="margin-right: 20px;" [disabled]= "!implementoForm.form.valid">Guardar</button>
     <!--BOTON-DE-volver-------------------------->
     <button class="btn" routerLink = "../../implementos">
         Regresar
