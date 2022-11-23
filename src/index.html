@@ -9,32 +9,7 @@
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
   
 </head>
-<body class="dark"onload="funcionesSidebar()">
+<body class="dark">
   <app-root></app-root>
 </body>
-
-<script>
-  function funcionesSidebar() {
-    const body = document.querySelector('body'),
-    sidebar = body.querySelector('nav'),
-    toggle = body.querySelector(".toggle"),
-    modeSwitch = body.querySelector(".toggle-switch"),
-    modeText = body.querySelector(".mode-text");
-
-    toggle.addEventListener("click" , () =>{
-        sidebar.classList.toggle("close");
-    })
-    
-    modeSwitch.addEventListener("click" , () =>{
-        body.classList.toggle("dark");
-        
-        if(body.classList.contains("dark")){
-            modeText.innerText = "Dark mode";
-        }else{
-            modeText.innerText = "Light mode";
-            
-        }
-    });
-}
-</script>
 </html>

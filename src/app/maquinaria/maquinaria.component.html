@@ -1,48 +1,47 @@
-<section class="home">
-    <div class="text">Bienvenido Administrador</div>    
-    <div>
-        <h1 class="tabla-titulo">Maquinaria</h1>
-        <p class="tabla-p">A continuación encontraras todos los Maquinaria registrados, como los deportivos o sobre elementos para gimnasio que brinda la Escuela Tecnológica Instituto Técnico Central (ETITC).</p>
-        
-        <div class="boton-css">
-            <button>
-                <a routerLink="../inicio" class="btn">Volver</a>
-            </button>
-            <button>
-                <a routerLink="registrar-maquinaria" class="btn">Registrar Maquinaria</a>
-            </button>
-        </div>
-
-        <table class="tablas-crud">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Categoria</th>
-                    <th colspan="2">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let maquinaria of maquinarias">
-                    <td>{{maquinaria.idMaquinaria}}</td>
-                    <td>{{maquinaria.nombreMaquinaria}}</td>
-                    <td>{{maquinaria.descripcionMaquinaria}}</td>
-                    <td>{{maquinaria.categoriaMaquinaria}}</td>
-                    <td>
-                        <button (click) = "actualizarMaquinaria(maquinaria.idMaquinaria)" class="btn">
-                            <i class='bx bxs-edit icon'></i>
-                            Editar
-                        </button>
-                    </td>
-                    <td>
-                        <button (click) = "eliminarMaquinaria(maquinaria.idMaquinaria)" class="btn">
-                            <i class='bx bx-trash icon' ></i>
-                            Eliminar
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<div>
+    <h1 class="tabla-titulo">Maquinaria</h1>
+    <p class="tabla-p">A continuación encontraras todos los Maquinaria registrados, como los deportivos o sobre elementos para gimnasio que brinda la Escuela Tecnológica Instituto Técnico Central (ETITC).</p>
+    
+    <div class="boton-css">
+        <button>
+            <a routerLink="../inicio" class="btn">Volver</a>
+        </button>
+        <button>
+            <a routerLink="registrar-maquinaria" class="btn">Registrar Maquinaria</a>
+        </button>
     </div>
-</section>
+
+    <table class="tablas-crud">
+        <thead>
+            <tr>
+                <th>Serial</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Estado</th>
+                <th>Categoria</th>
+                <th colspan="2">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let maquinaria of maquinarias">
+                <td>{{maquinaria.serialMaquinaria}}</td>
+                <td>{{maquinaria.nombreMaquinaria}}</td>
+                <td>{{maquinaria.descripcionMaquinaria}}</td>
+                <td>{{maquinaria.estadoMaquinaria}}</td>
+                <td>{{maquinaria.categoriaMaquinaria}}</td>
+                <td>
+                    <button (click) = "actualizarMaquinaria(maquinaria.idMaquinaria)" class="btn">
+                        <i class='bx bxs-edit icon'></i>
+                        Editar
+                    </button>
+                </td>
+                <td>
+                    <button (click) = "eliminarMaquinaria(maquinaria.idMaquinaria)" class="btn">
+                        <i class='bx bx-trash icon' ></i>
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

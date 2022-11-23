@@ -17,9 +17,9 @@ export class MaquinariaService {
     return this.httpClient.get<Maquinaria[]>(`${this.URLBase}`);
   }
 
-  obtenerMaquinariaPorId(idImplemento:number):Observable<Maquinaria>{
-    console.log(this.httpClient.get<Maquinaria>(`${this.URLBase}/${idImplemento}`));
-    return this.httpClient.get<Maquinaria>(`${this.URLBase}/${idImplemento}`);
+  obtenerMaquinariaPorId(idMaquinaria:number):Observable<Maquinaria>{
+    console.log(this.httpClient.get<Maquinaria>(`${this.URLBase}/${idMaquinaria}`));
+    return this.httpClient.get<Maquinaria>(`${this.URLBase}/${idMaquinaria}`);
   }
 
   //Metodo que nos sirve para guardar un Maquinaria del fronend y enviarlo al backend

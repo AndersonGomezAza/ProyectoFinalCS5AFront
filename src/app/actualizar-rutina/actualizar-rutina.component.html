@@ -1,22 +1,21 @@
-<section class="home">
-    <div class="text">Bienvenido Administrador</div> 
-    <!--FORMULARIO---->
-    <form class="form" (ngSubmit)="onSubmitRutina()" #rutinaForm = "ngForm">
-            
-        <!--TITULO------------------------>
-        <h1 class="titulo">Actualizar Rutina</h1>
+
+<!--FORMULARIO---->
+<form class="form" (ngSubmit)="onSubmitRutina()" #rutinaForm = "ngForm">
         
-        <!--CAJAS-DE-ENTRADA-DE-DATOS------------------------------------------------>
-        <input class="cajas" type="text" [(ngModel)]="rutina.nombreRutina" placeholder="Nombre" id="nombreRutina" name="nombreRutina" #nombreRutina="ngModel">
-        <textarea class="cajas" name="descripcionRutina" id="descripcionRutina" cols="30" rows="5" [(ngModel)]="rutina.descripcionRutina" placeholder="Descripcion" #descripcionRutina="ngModel"></textarea>
-        <input class="cajas" type="text" [(ngModel)]="rutina.tiempoRutina" placeholder="Categoria" id="tiempoRutina" name="tiempoRutina" #tiempoRutina="ngModel">
-        
-        <!--BOTON-DE-ACTUALIZAR-------------------------->
-        <button class="btn" [disabled]= "!rutinaForm.form.valid">Guardar</button>
-        <!--BOTON-DE-volver-------------------------->
-        <button class="btn" routerLink = "../../rutina">
-            Regresar
-        </button>
-        
-    </form>
-    </section>
+    <!--TITULO------------------------>
+    <h1 class="titulo">Actualizar Rutina</h1>
+    
+    <!--CAJAS-DE-ENTRADA-DE-DATOS------------------------------------------------>
+    <input class="cajas" type="text" [(ngModel)]="rutina.nombreRutina" placeholder="Nombre" id="nombreRutina" name="nombreRutina" #nombreRutina="ngModel">
+    <textarea class="cajas" name="descripcionRutina" id="descripcionRutina" cols="30" rows="5" [(ngModel)]="rutina.descripcionRutina" placeholder="Descripcion" #descripcionRutina="ngModel"></textarea>
+    <input class="cajas" type="text" [(ngModel)]="rutina.caloriasRutina" placeholder="Calorias" id="caloriasRutina" name="caloriasRutina" #caloriasRutina="ngModel">
+    <input class="cajas" type="text" [(ngModel)]="rutina.tiempoRutina" placeholder="Tiempo" id="tiempoRutina" name="tiempoRutina" #tiempoRutina="ngModel">
+    
+    <!--BOTON-DE-ACTUALIZAR-------------------------->
+    <button class="btn" style="margin-right: 20px;" [disabled]= "!rutinaForm.form.valid">Guardar</button>
+    <!--BOTON-DE-volver-------------------------->
+    <button class="btn" routerLink = "../../rutina">
+        Regresar
+    </button>
+    
+</form>

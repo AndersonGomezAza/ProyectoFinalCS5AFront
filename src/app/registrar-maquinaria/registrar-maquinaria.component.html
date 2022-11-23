@@ -1,5 +1,4 @@
-<section class="home">
-    <div class="text">Bienvenido Administrador</div> 
+
     <!--FORMULARIO---->
     <form class="form" (ngSubmit)="onSubmitMaquinaria()">
             
@@ -7,8 +6,14 @@
         <h1 class="titulo">Registrar Maquinaria</h1>
         
         <!--CAJAS-DE-ENTRADA-DE-DATOS------------------------------------------------>
+        <input class="cajas" type="text" [(ngModel)]="maquinaria.serialMaquinaria" placeholder="Serial" id="serialMaquinaria" name="serialMaquinaria" #serialMaquinaria="ngModel">
         <input class="cajas" type="text" [(ngModel)]="maquinaria.nombreMaquinaria" placeholder="Nombre" id="nombreMaquinaria" name="nombreMaquinaria">
-        <textarea class="cajas" name="descripcionMaquinaria" id="descripcionMaquinaria" cols="30" rows="5" [(ngModel)]="maquinaria.descripcionMaquinaria" placeholder="Descripcion"></textarea>
+        <textarea class="cajas" name="descripcionMaquinaria" id="descripcionMaquinaria" cols="30" rows="4" [(ngModel)]="maquinaria.descripcionMaquinaria" placeholder="Descripcion"></textarea>
+        <select class="cajas" type="text" [(ngModel)]="maquinaria.estadoMaquinaria" id="estadoMaquinaria" name="estadoMaquinaria">
+            <option class="cajas" value="En Uso">En Uso</option>
+            <option class="cajas" value="Disponible">Disponible</option>
+            <option class="cajas" value="En Mantenimiento">En Mantenimiento</option>
+        </select>
         <input class="cajas" type="text" [(ngModel)]="maquinaria.categoriaMaquinaria" placeholder="Categoria" id="categoriaMaquinaria" name="categoriaMaquinaria">
         
         <!--BOTON-DE-REGISTRARSE-------------------------->
@@ -16,9 +21,8 @@
             Registrar
         </button>
         <!--BOTON-DE-VOLVER-------------------------->
-    <button class="btn" routerLink = "../../maquinarias">
-        Regresar
-    </button>
+        <button class="btn" routerLink = "../../maquinarias">
+            Regresar
+        </button>
         
     </form>
-</section>
