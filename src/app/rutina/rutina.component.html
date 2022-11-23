@@ -19,7 +19,8 @@
                     <th>Id</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
-                    <th>Categoria</th>
+                    <th>Calorias</th>
+                    <th>Tiempo</th>
                     <th colspan="2">Acciones</th>
                 </tr>
             </thead>
@@ -28,6 +29,7 @@
                     <td>{{rutina.idRutina}}</td>
                     <td>{{rutina.nombreRutina}}</td>
                     <td>{{rutina.descripcionRutina}}</td>
+                    <td>{{rutina.caloriasRutina}}</td>
                     <td>{{rutina.tiempoRutina}}</td>
                     <td>
                         <button (click) = "actualizarRutina(rutina.idRutina)" class="btn">
