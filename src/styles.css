@@ -421,14 +421,24 @@ body.dark .home .text{
 /*--CAJAS-DE-DATOS---------------*/
 .cajas{
     width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 10px;
     border-radius: 2px;
     border: none;
     cursor: pointer;
     border-left: 10px solid #d9e4ea;
     transition: all .5s ease;
+    margin-bottom: 20px;
 }
+
+.cajas-texto{
+    text-align: left;
+    color: var(--titulo-form);
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    border: none;
+}
+
 .cajas:hover, .cajas:focus{
     border-left: 10px solid var(--form-fondo);
 }

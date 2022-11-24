@@ -6,15 +6,20 @@
     <h1 class="titulo">Actualizar Maquinaria</h1>
     
     <!--CAJAS-DE-ENTRADA-DE-DATOS------------------------------------------------>
-    <input class="cajas" type="text" [(ngModel)]="maquinaria.serialMaquinaria" placeholder="Serial" id="serialMaquinaria" name="serialMaquinaria" #serialMaquinaria="ngModel">
-    <input class="cajas" type="text" [(ngModel)]="maquinaria.nombreMaquinaria" placeholder="Nombre" id="nombreMaquinaria" name="nombreMaquinaria" #nombreMaquinaria="ngModel">
-    <textarea class="cajas" name="descripcionMaquinaria" id="descripcionMaquinaria" cols="30" rows="5" [(ngModel)]="maquinaria.descripcionMaquinaria" placeholder="Descripcion" #descripcionMaquinaria="ngModel"></textarea>
+    <label for="serialMaquinaria" class="cajas-texto">Serial</label>
+    <input class="cajas" type="text" [(ngModel)]="maquinaria.serialMaquinaria" id="serialMaquinaria" name="serialMaquinaria" #serialMaquinaria="ngModel" disabled>
+    <label for="nombreMaquinaria" class="cajas-texto">Nombre</label>
+    <input class="cajas" type="text" [(ngModel)]="maquinaria.nombreMaquinaria" id="nombreMaquinaria" name="nombreMaquinaria">
+    <label for="descripcionMaquinaria" class="cajas-texto">Descripcion</label>
+    <textarea class="cajas" name="descripcionMaquinaria" id="descripcionMaquinaria" cols="30" rows="2" [(ngModel)]="maquinaria.descripcionMaquinaria"></textarea>
+    <label for="estadoMaquinaria" class="cajas-texto">Estado</label>
     <select class="cajas" type="text" [(ngModel)]="maquinaria.estadoMaquinaria" id="estadoMaquinaria" name="estadoMaquinaria">
         <option class="cajas" value="En Uso">En Uso</option>
         <option class="cajas" value="Disponible">Disponible</option>
         <option class="cajas" value="En Mantenimiento">En Mantenimiento</option>
     </select>
-    <input class="cajas" type="text" [(ngModel)]="maquinaria.categoriaMaquinaria" placeholder="Categoria" id="categoriaMaquinaria" name="categoriaMaquinaria" #categoriaMaquinaria="ngModel">
+    <label for="categoriaMaquinaria" class="cajas-texto">Categoria</label>
+    <input class="cajas" type="text" [(ngModel)]="maquinaria.categoriaMaquinaria" id="categoriaMaquinaria" name="categoriaMaquinaria">
     
     <!--BOTON-DE-ACTUALIZAR-------------------------->
     <button class="btn" style="margin-right: 20px;" [disabled]= "!maquinariaForm.form.valid">Guardar</button>
