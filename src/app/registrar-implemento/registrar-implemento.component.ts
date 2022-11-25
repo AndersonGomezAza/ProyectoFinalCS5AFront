@@ -17,7 +17,15 @@ export class RegistrarImplementoComponent implements OnInit {
   }
 
   onSubmitImplemento(){
-    this.guardarImplemento();
+    let validar = this.implemento;
+    if (validar.nombreImplemento == null || validar.categoriaImplemento == null) {
+      alert("Por favor digitar Nombre y Categoria del implemento");
+    } else if (validar.descripcionImplemento == null) {
+      this.implemento.descripcionImplemento = "Sin descripción";
+      this.guardarImplemento();
+    } else {
+      this.guardarImplemento();
+    }
   }
 
   guardarImplemento(){

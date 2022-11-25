@@ -1,1 +1,47 @@
-<p>usuario works!</p>
+
+    <div>
+        
+        <h1 class="tabla-titulo">Usuarios</h1>
+        <p class="tabla-p">A continuación encontraras todos los Usuarios registrados, como los deportivos o sobre elementos para gimnasio que brinda la Escuela Tecnológica Instituto Técnico Central (ETITC).</p>
+        
+        <div class="boton-css">
+            <button>
+                <a routerLink="../inicio" class="btn">Volver</a>
+            </button>
+            <button>
+                <a routerLink="registrar-usuario" class="btn">Registrar Usuario</a>
+            </button>
+        </div>
+
+        <table class="tablas-crud">
+            <thead>
+                <tr>
+                    <th>Numero Documento</th>
+                    <th>Tipo Documento</th>
+                    <th>Nombres</th>
+                    <th>Fecha Registro</th>
+                    <th>Rol</th>
+                    <th colspan="2">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of usuario">
+                    <td>{{usuario.numDocumento}}</td>
+                    <td>{{usuario.tipoDoc}}</td>
+                    <td>{{usuario.nombres}}</td>
+                    <td>{{usuario.fechaRegistro}}</td>
+                    <td>{{usuario.rol}}</td>
+                    <td>
+                        <button (click) = "actualizarUsuario(usuario.numDocumento)" class="btn">
+                            Editar
+                        </button>
+                    </td>
+                    <td>
+                        <button (click) = "eliminarUsuario(usuario.numDocumento)" class="btn">
+                            Eliminar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

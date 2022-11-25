@@ -18,7 +18,15 @@ export class RegistrarRutinaComponent implements OnInit {
   }
 
   onSubmitRutina(){
-    this.guardarRutina();
+    let validar = this.rutina;
+    if (validar.nombreRutina == null || validar.tiempoRutina == null || validar.caloriasRutina == null) {
+      alert("Por favor digitar Nombre, Duracion(Tiempo) y Categoria de la Rutina");
+    } else if (validar.descripcionRutina == null) {
+      this.rutina.descripcionRutina= "Sin descripción";
+      this.guardarRutina();
+    } else {
+      this.guardarRutina();
+    }
   }
 
   guardarRutina(){

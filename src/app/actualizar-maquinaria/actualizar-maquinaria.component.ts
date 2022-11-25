@@ -27,8 +27,18 @@ export class ActualizarMaquinariaComponent implements OnInit {
   }
 
   onSubmitMaquinaria(){
-    this.maquinariasService.actualizarMaquinariaBackEnd(this.idMaquinaria,this.maquinaria).subscribe(dato => {
-      this.irAlaListaDeMaquinarias();
-    },error => console.log(error));
+    let validar = this.maquinaria;
+    if (validar.serialMaquinaria == "" || validar.nombreMaquinaria == "" || validar.estadoMaquinaria == "" || validar.categoriaMaquinaria == "") {
+      alert("Por favor digitar Serial, Nombre, Estado y Categoria de la maquinaria");
+    } else if (validar.descripcionMaquinaria == "") {
+      this.maquinaria.descripcionMaquinaria = "Sin descripción";
+      this.maquinariasService.actualizarMaquinariaBackEnd(this.idMaquinaria,this.maquinaria).subscribe(dato => {
+        this.irAlaListaDeMaquinarias();
+      },error => console.log(error));
+    } else {
+      this.maquinariasService.actualizarMaquinariaBackEnd(this.idMaquinaria,this.maquinaria).subscribe(dato => {
+        this.irAlaListaDeMaquinarias();
+      },error => console.log(error));
+    }
   }
 }

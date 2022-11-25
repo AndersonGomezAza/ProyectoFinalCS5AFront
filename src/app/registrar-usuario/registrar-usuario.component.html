@@ -1,1 +1,33 @@
-<p>registrar-usuario works!</p>
+
+    <!--FORMULARIO---->
+    <form class="form" (ngSubmit)="obtenerUsuario()">
+            
+        <!--TITULO------------------------>
+        <h1 class="titulo">Registrar Usuario</h1>
+        
+        <!--CAJAS-DE-ENTRADA-DE-DATOS------------------------------------------------>
+        <label class="cajas-texto">Numero Documento</label>
+        <input class="cajas" type="text" [(ngModel)]="usuario.numDocumento" id="numDocumentoUsuario" name="numDocumentoUsuario">
+        <label class="cajas-texto">Tipo de Documento</label>
+        <select name="tipoDocumentos" [(ngModel)]="usuario.tipoDoc" id="tipoDocumento" class="cajas">
+            <option value="Cedula de ciudadania">Cedula de ciudadania</option>
+            <option value="Cedula de extranjeria">Cedula de extranjeria</option>
+            <option value="Pasaporte">Pasaporte</option>
+        </select>
+        <label class="cajas-texto">Nombres</label>
+        <input class="cajas" type="text" [(ngModel)]="usuario.nombres" id="nombresUsuario" name="nombresUsuario">
+        <label class="cajas-texto">Fecha</label>
+        <input class="cajas" type="date" [(ngModel)]="usuario.fechaRegistro" id="FechaUsuario" name="FechaUsuario">
+        <label class="cajas-texto">Rol</label>
+        <input class="cajas" type="text" [(ngModel)]="usuario.rol" id="RolUsuario" name="RolUsuario">
+        
+        <!--BOTON-DE-REGISTRARSE-------------------------->
+        <button class="btn" style="margin-right: 20px;">
+            Registrar
+        </button>
+        <!--BOTON-DE-VOLVER-------------------------->
+        <button class="btn" routerLink = "../../usuarios">
+            Regresar
+        </button>
+        
+    </form>

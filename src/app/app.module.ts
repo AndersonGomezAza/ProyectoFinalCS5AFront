@@ -8,19 +8,20 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { ImplementosComponent } from './implementos/implementos.component';
 import { MaquinariaComponent } from './maquinaria/maquinaria.component';
+import { RutinaComponent } from './rutina/rutina.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 import { FormsModule } from '@angular/forms';
 import { RegistrarImplementoComponent } from './registrar-implemento/registrar-implemento.component';
 import { RegistrarMaquinariaComponent } from './registrar-maquinaria/registrar-maquinaria.component';
+import { RegistrarRutinaComponent } from './registrar-rutina/registrar-rutina.component';
+import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { ActualizarImplementoComponent } from './actualizar-implemento/actualizar-implemento.component';
 import { ActualizarMaquinariaComponent } from './actualizar-maquinaria/actualizar-maquinaria.component';
-import { RegistrarRutinaComponent } from './registrar-rutina/registrar-rutina.component';
 import { ActualizarRutinaComponent } from './actualizar-rutina/actualizar-rutina.component';
-import { RutinaComponent } from './rutina/rutina.component';
+import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usuario.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { ActivatedRoute } from '@angular/router';
-import { UsuarioComponent } from './usuario/usuario.component';
-import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usuario.component';
-import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
+import { PlanesComponent } from './planes/planes.component';
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
@@ -54,14 +55,15 @@ function initializeKeycloak(keycloak: KeycloakService) {
     RutinaComponent,
     UsuarioComponent,
     ActualizarUsuarioComponent,
-    RegistrarUsuarioComponent
+    RegistrarUsuarioComponent,
+    PlanesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    KeycloakAngularModule
+    KeycloakAngularModule,
   ],
   providers: [
     {

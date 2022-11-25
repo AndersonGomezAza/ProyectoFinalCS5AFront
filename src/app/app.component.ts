@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { KeycloakService } from 'keycloak-angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent {
 
   user = '';  role = '';
   dia: Date; fechaActual:Date; hora = 0; min = 0; seg = 0;
-  constructor(private KeycloakService: KeycloakService) { }
+  constructor(private KeycloakService: KeycloakService, private router: Router) { }
 
   ngOnInit(): void {
     this.ponerDatos();

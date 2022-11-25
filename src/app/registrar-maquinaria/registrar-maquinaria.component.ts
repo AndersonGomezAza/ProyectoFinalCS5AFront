@@ -18,7 +18,15 @@ export class RegistrarMaquinariaComponent implements OnInit {
   }
 
   onSubmitMaquinaria(){
-    this.guardarMaquinaria();
+    let validar = this.maquinaria;
+    if (validar.serialMaquinaria == null || validar.nombreMaquinaria == null || validar.estadoMaquinaria == null || validar.categoriaMaquinaria == null) {
+      alert("Por favor digitar Serial, Nombre, Estado y Categoria de la maquinaria");
+    } else if (validar.descripcionMaquinaria == null) {
+      this.maquinaria.descripcionMaquinaria = "Sin descripción";
+      this.guardarMaquinaria();
+    } else {
+      this.guardarMaquinaria();
+    }
   }
 
   guardarMaquinaria(){
@@ -30,5 +38,4 @@ export class RegistrarMaquinariaComponent implements OnInit {
   retornarHaciaLaLista(){
     this.routerMaquinaria.navigate(['maquinarias']);
   }
-
 }

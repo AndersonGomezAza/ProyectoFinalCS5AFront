@@ -24,6 +24,7 @@
     --tabla-fondo: rgb(57, 206, 34);
     --irAriba: #09200f;
     --irAribaText: #fff;
+    --imagenMantenimiento: url("assets/img/mantenimientoLigth.png");
     
 
     /* ====== Transition ====== */
@@ -53,6 +54,7 @@ body.dark{
     --tabla-fondo: rgba(57, 206, 34, 0.482);
     --irAriba: #fff;
     --irAribaText: #09200f;
+    --imagenMantenimiento: url("assets/img/mantenimiento.png");
 
     text-align: center;
 }
@@ -421,14 +423,24 @@ body.dark .home .text{
 /*--CAJAS-DE-DATOS---------------*/
 .cajas{
     width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 10px;
     border-radius: 2px;
     border: none;
     cursor: pointer;
     border-left: 10px solid #d9e4ea;
     transition: all .5s ease;
+    margin-bottom: 20px;
 }
+
+.cajas-texto{
+    text-align: left;
+    color: var(--titulo-form);
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    border: none;
+}
+
 .cajas:hover, .cajas:focus{
     border-left: 10px solid var(--form-fondo);
 }
@@ -478,4 +490,10 @@ body.dark .home .text{
     padding: 7px;
     border-radius: 10px;
     margin-right: 10px;
+}
+
+.cambiar{
+    background-image: var(--imagenMantenimiento);
+    width: 100%;
+    height: 519px;
 }

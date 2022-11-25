@@ -27,9 +27,20 @@ export class ActualizarRutinaComponent implements OnInit {
   }
 
   onSubmitRutina(){
-    this.rutinasService.actualizarRutinaBackEnd(this.idRutina,this.rutina).subscribe(dato => {
+    let validar = this.rutina;
+    if (validar.nombreRutina == "" || validar.tiempoRutina == "" || validar.caloriasRutina == "") {
+      alert("Por favor digitar Nombre, Duracion(Tiempo) y Categoria de la Rutina");
+    } else if (validar.descripcionRutina == "") {
+      this.rutina.descripcionRutina= "Sin descripción";
+      this.rutinasService.actualizarRutinaBackEnd(this.idRutina,this.rutina).subscribe(dato => {
       this.irAlaListaDeRutinas();
     },error => console.log(error));
+    } else {
+      this.rutinasService.actualizarRutinaBackEnd(this.idRutina,this.rutina).subscribe(dato => {
+      this.irAlaListaDeRutinas();
+    },error => console.log(error));
+    }
+    
   }
 
 }

@@ -2,7 +2,7 @@
   
   <div class="cards-list">
 
-    <a class="card-list-a administrador link-block-sidebar" routerLink="">
+    <a routerLink="../usuarios" class="card-list-a administrador link-block-sidebar">
       <div class="card">
         <div class="card_image"> 
           <img src="https://smtm.co/assets/animated_icons/asistencia-334f4ce20af91559339d99b65518f7cd.gif"/>
@@ -49,7 +49,7 @@
       </div>
     </a>
 
-    <a routerLink="" class="card-list-a entrenador link-block-sidebar">
+    <a routerLink="../planes" class="card-list-a entrenador link-block-sidebar">
       <div class="card">
         <div class="card_image">
           <img src="https://media0.giphy.com/media/PcRSdggIn1KUB0AMZX/giphy.gif?cid=6c09b95226rntvvd2lgu1gq9mn5ultbwtge61puz6rfc6fcy&rid=giphy.gif&ct=s" />
@@ -60,7 +60,7 @@
       </div>
     </a>
     
-    <a routerLink="" class="card-list-a usuario link-block-sidebar">
+    <a routerLink="../planes" class="card-list-a usuario link-block-sidebar">
       <div class="card">
         <div class="card_image">
           <img src="https://media4.giphy.com/media/cIHhspKpBOClzOado8/giphy.gif?cid=ecf05e47s989053mymcnmvrsz8yts9ijaj6tdnsq4pj0okjt&rid=giphy.gif&ct=g" />
@@ -71,27 +71,3 @@
       </div>
     </a>
   </div>
-
-<script>
-  function funcionesSidebar() {
-    const body = document.querySelector("body"),
-      sidebar = body.querySelector("nav"),
-      toggle = body.querySelector(".toggle"),
-      modeSwitch = body.querySelector(".toggle-switch"),
-      modeText = body.querySelector(".mode-text");
-
-    toggle.addEventListener("click", () => {
-      sidebar.classList.toggle("close");
-    });
-
-    modeSwitch.addEventListener("click", () => {
-      body.classList.toggle("dark");
-
-      if (body.classList.contains("dark")) {
-        modeText.innerText = "Light mode";
-      } else {
-        modeText.innerText = "Dark mode";
-      }
-    });
-  }
-</script>
