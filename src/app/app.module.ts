@@ -21,6 +21,7 @@ import { ActualizarRutinaComponent } from './actualizar-rutina/actualizar-rutina
 import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usuario.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { ActivatedRoute } from '@angular/router';
+import { PlanesComponent } from './planes/planes.component';
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
@@ -55,6 +56,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
     UsuarioComponent,
     ActualizarUsuarioComponent,
     RegistrarUsuarioComponent,
+    PlanesComponent,
   ],
   imports: [
     BrowserModule,

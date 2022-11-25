@@ -24,6 +24,7 @@
     --tabla-fondo: rgb(57, 206, 34);
     --irAriba: #09200f;
     --irAribaText: #fff;
+    --imagenMantenimiento: url("assets/img/mantenimientoLigth.png");
     
 
     /* ====== Transition ====== */
@@ -53,6 +54,7 @@ body.dark{
     --tabla-fondo: rgba(57, 206, 34, 0.482);
     --irAriba: #fff;
     --irAribaText: #09200f;
+    --imagenMantenimiento: url("assets/img/mantenimiento.png");
 
     text-align: center;
 }
@@ -488,4 +490,10 @@ body.dark .home .text{
     padding: 7px;
     border-radius: 10px;
     margin-right: 10px;
+}
+
+.cambiar{
+    background-image: var(--imagenMantenimiento);
+    width: 100%;
+    height: 519px;
 }

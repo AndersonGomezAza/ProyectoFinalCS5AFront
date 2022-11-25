@@ -13,6 +13,7 @@ import { ActualizarRutinaComponent } from './actualizar-rutina/actualizar-rutina
 import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usuario.component';
 import { RutinaComponent } from './rutina/rutina.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { PlanesComponent } from './planes/planes.component';
 
 const routes: Routes = [
   {path : 'inicio', component:InicioComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path : 'maquinarias', component:MaquinariaComponent},
   {path : 'rutinas', component:RutinaComponent},
   {path : 'usuarios', component:UsuarioComponent},
+  {path : 'planes', component:PlanesComponent},
   {path : 'implementos/registrar-implemento', component:RegistrarImplementoComponent},
   {path : 'maquinarias/registrar-maquinaria', component:RegistrarMaquinariaComponent},
   {path : 'rutinas/registrar-rutina', component:RegistrarRutinaComponent},

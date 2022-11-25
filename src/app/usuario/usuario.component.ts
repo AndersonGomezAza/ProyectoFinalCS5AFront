@@ -11,14 +11,14 @@ import { UsuarioService } from '../usuario.service';
 export class UsuarioComponent implements OnInit {
 
   usuario: Usuario[];
-  constructor(private UsuarioServicio: UsuarioService, private routerUsuario:Router) { }
+  constructor(private usuarioServicio: UsuarioService, private routerUsuario:Router) { }
 
   ngOnInit(): void {
     this.obtenerUsuario();
   }
 
   private obtenerUsuario(){
-    this.UsuarioServicio.obtenerUsuarioBackEnd().subscribe(dato => {
+    this.usuarioServicio.obtenerUsuarioBackEnd().subscribe(dato => {
       this.usuario = dato;
     })
   }
@@ -29,7 +29,7 @@ export class UsuarioComponent implements OnInit {
 
   eliminarUsuario(numDocumento:number){
     location.reload();
-    this.UsuarioServicio.eliminarUsuarioBackEnd(numDocumento).subscribe(dato =>{
+    this.usuarioServicio.eliminarUsuarioBackEnd(numDocumento).subscribe(dato =>{
       this.obtenerUsuario();
     });
   }

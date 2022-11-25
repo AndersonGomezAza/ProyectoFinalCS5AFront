@@ -40,4 +40,21 @@ export class RegistrarUsuarioComponent implements OnInit {
   retornarHaciaLaLista(){
     this.routerUsuario.navigate(['usuarios']);
   }
+
+  usuarios: Usuario[];
+
+  obtenerUsuario(){
+    this.usuarioServicio.obtenerUsuarioBackEnd().subscribe(dato => {
+      this.usuarios = dato;
+      for (let usuario of this.usuarios) {
+        if (usuario.numDocumento ==this.usuario.numDocumento) {
+          alert("El numero de documento ya existe");
+        } else {
+          this.onSubmitUsuario();
+        }
+      }
+    })
+    
+  }
+  
 }
